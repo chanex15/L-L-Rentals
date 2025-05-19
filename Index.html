@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L&L Rentals</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="nav">
+    <span class="logo">L&amp;L RENTALS</span>
+    <ul class="nav-links">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="Leases.html">Leases</a></li>
+      <li><a href="Rent.html">Rent</a></li>
+      <li><a href="Payments.html">Payments</a></li>
+      <li><a href="Forms.html">Forms</a></li>
+      <li><a href="Create.html">Create Account</a></li>
+      <li><a href="Index.html" class="login-link">Login</a></li>
+    </ul>
+  </nav>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Find Your Perfect Space:</h1>
+      <p>Homes, Apartments, and More<br />at Your Fingertips!</p>
+    </div>
+
+    <form class="login-card">
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Renter@example.com" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Password" required />
+
+      <div class="card-footer">
+        <label class="show-toggle">
+          <input type="checkbox" onclick="togglePwd()" />
+          <span>Show</span>
+        </label>
+        <button type="submit" class="btn-primary">Login</button>
+      </div>
+    </form>
+  </section>
+
+  <script>
+    // quick JS to show/hide password (small UX bonus)
+    function togglePwd() {
+      const pwd = document.getElementById("password");
+      pwd.type = pwd.type === "password" ? "text" : "password";
+    }
+  </script>
+</body>
+
+<br>
+<br>
+<br>
+   <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Holding the title of the largest corporation in the Philippines, L&L also maintains a significant presence in the luxury market, offering a wide array of upscale products and services.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <div class="contact-info">
+                    <a href="mailto:L&L-Rental@Gmail.com"><i class="fas fa-envelope"></i> L&L-Rental@Gmail.com</a>
+                    <a href="tel:+63987654321"><i class="fas fa-phone"></i> +63 987 654 321</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/?lang=en-ca"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.tiktok.com/explore"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            © 2025 L&L RENTALS All rights reserved.
+        </div>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </footer>
+
+</html>

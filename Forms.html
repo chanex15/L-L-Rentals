@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L&L Rentals</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="nav">
+    <span class="logo">L&amp;L RENTALS</span>
+    <ul class="nav-links">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="Leases.html">Leases</a></li>
+      <li><a href="Rent.html">Rent</a></li>
+      <li><a href="Payments.html">Payments</a></li>
+      <li><a href="Forms.html">Forms</a></li>
+      <li><a href="Create.html">Create Account</a></li>
+      <li><a href="Index.html" class="login-link">Login</a></li>
+    </ul>
+  </nav>
+
+  <body>
+    <div class="form-container">
+        <h1>Property Transaction Form</h1>
+        
+        <form class="transaction-form">
+            <!-- Transaction Type Section -->
+            <div class="form-section">
+                <h2>Transaction Type:</h2>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="purchase" name="transaction-type" value="purchase" checked>
+                        <label for="purchase">Purchase</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="rent" name="transaction-type" value="rent">
+                        <label for="rent">Rent</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Personal Information Section -->
+            <div class="form-section">
+                <h2>Personal Information</h2>
+                <div class="form-group">
+                    <label for="full-name" class="required">Full Name</label>
+                    <input type="text" id="full-name" name="full-name" required>
+                </div>
+                <div class="form-columns">
+                    <div class="form-group">
+                        <label for="contact-number" class="required">Contact Number</label>
+                        <input type="tel" id="contact-number" name="contact-number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="required">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Property Details Section -->
+            <div class="form-section">
+                <h2>Property Details</h2>
+                <div class="form-group">
+                    <label for="property-type" class="required">Property Type</label>
+                    <select id="property-type" name="property-type" required>
+                        <option value="">Select...</option>
+                        <option value="apartment">Apartment</option>
+                        <option value="condo">Condo</option>
+                        <option value="house">House</option>
+                        <option value="townhouse">Townhouse</option>
+                        <option value="duplex">Duplex</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="property-address" class="required">Property Address</label>
+                    <input type="text" id="property-address" name="property-address" required>
+                </div>
+                <div class="form-columns">
+                    <div class="form-group">
+                        <label for="bedrooms">Bedrooms</label>
+                        <input type="number" id="bedrooms" name="bedrooms" min="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="bathrooms">Bathrooms</label>
+                        <input type="number" id="bathrooms" name="bathrooms" min="0" step="0.5">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transaction Details Section -->
+            <div class="form-section">
+                <h2>Transaction Details</h2>
+                <div class="form-group">
+                    <label for="offer-price" class="required">Offer Price/Rent Amount</label>
+                    <input type="number" id="offer-price" name="offer-price" min="0" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="move-in-date">Preferred Move-in/Closing Date</label>
+                    <input type="text" id="move-in-date" name="move-in-date" placeholder="mm/dd/yyyy">
+                </div>
+            </div>
+
+            <!-- Declaration Section -->
+            <div class="form-section">
+                <h2>Declaration</h2>
+                <div class="declaration-group">
+                    <div class="declaration-checkbox">
+                        <input type="checkbox" id="declaration" name="declaration" required>
+                        <label for="declaration">I certify that the information provided is accurate and complete.</label>
+                    </div>
+                    <div class="signature-fields">
+                        <div class="form-group">
+                            <label for="signature">Signature</label>
+                            <input type="text" id="signature" name="signature">
+                        </div>
+                        <div class="form-group">
+                            <label for="signature-date" class="required">Date</label>
+                            <input type="text" id="signature-date" name="signature-date" placeholder="mm/dd/yyyy" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-button">Submit Application</button>
+        </form>
+    </div>
+  </body>
+  <br>
+<br>
+<br>
+ <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Holding the title of the largest corporation in the Philippines, L&L also maintains a significant presence in the luxury market, offering a wide array of upscale products and services.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <div class="contact-info">
+                    <a href="mailto:L&L-Rental@Gmail.com"><i class="fas fa-envelope"></i> L&L-Rental@Gmail.com</a>
+                    <a href="tel:+63987654321"><i class="fas fa-phone"></i> +63 987 654 321</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/?lang=en-ca"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.tiktok.com/explore"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            © 2025 L&L RENTALS All rights reserved.
+        </div>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </footer>
+
+</html>

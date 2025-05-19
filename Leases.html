@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L&L Rentals</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="nav">
+    <span class="logo">L&amp;L RENTALS</span>
+    <ul class="nav-links">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="Leases.html">Leases</a></li>
+      <li><a href="Rent.html">Rent</a></li>
+      <li><a href="Payments.html">Payments</a></li>
+      <li><a href="Forms.html">Forms</a></li>
+      <li><a href="Create.html">Create Account</a></li>
+      <li><a href="Index.html" class="login-link">Login</a></li>
+    </ul>
+  </nav>
+
+  <div class="lease-container">
+        <div class="lease-header">
+            <h1>Residential Lease Agreement</h1>
+            <p>This agreement is made and entered into on this <span id="current-date"></span></p>
+        </div>
+
+        <form class="lease-form">
+            <!-- Parties Section -->
+            <div class="lease-section">
+                <h2>1. Parties</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="landlord-name" class="required">Landlord/Lessor Name</label>
+                        <input type="text" id="landlord-name" name="landlord-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tenant-name" class="required">Tenant/Lessee Name</label>
+                        <input type="text" id="tenant-name" name="tenant-name" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Property Information -->
+            <div class="lease-section">
+                <h2>2. Property Information</h2>
+                <div class="form-group">
+                    <label for="property-address" class="required">Property Address</label>
+                    <input type="text" id="property-address" name="property-address" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="unit-number">Unit Number</label>
+                        <input type="text" id="unit-number" name="unit-number">
+                    </div>
+                    <div class="form-group">
+                        <label for="parking-space">Parking Space</label>
+                        <input type="text" id="parking-space" name="parking-space">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lease Terms -->
+            <div class="lease-section">
+                <h2>3. Lease Terms</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="lease-start" class="required">Lease Start Date</label>
+                        <input type="date" id="lease-start" name="lease-start" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lease-end" class="required">Lease End Date</label>
+                        <input type="date" id="lease-end" name="lease-end" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="rent-amount" class="required">Monthly Rent Amount ($)</label>
+                        <input type="number" id="rent-amount" name="rent-amount" min="1000" step="1000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="due-day" class="required">Rent Due Day</label>
+                        <select id="due-day" name="due-day" required>
+                            <option value="1">1st of the month</option>
+                            <option value="5">5th of the month</option>
+                            <option value="15">15th of the month</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="security-deposit">Security Deposit Amount ($)</label>
+                    <input type="number" id="security-deposit" name="security-deposit" min="1000" step="1000">
+                </div>
+            </div>
+
+            <!-- Terms and Conditions -->
+            <div class="lease-section">
+                <h2>4. Terms and Conditions</h2>
+                <div class="terms-box">
+                    <h3>Standard Lease Terms</h3>
+                    <ol>
+                        <li><strong>Use of Property:</strong> The property shall be used exclusively as a private residence.</li>
+                        <li><strong>Occupants:</strong> Only the following persons may reside on the property: [list occupants]</li>
+                        <li><strong>Pets:</strong> No pets are allowed without prior written consent from the landlord.</li>
+                        <li><strong>Maintenance:</strong> Tenant shall maintain the property in good condition.</li>
+                        <li><strong>Alterations:</strong> Tenant shall not make any alterations without landlord's written consent.</li>
+                        <li><strong>Utilities:</strong> Tenant shall be responsible for the following utilities: [list utilities]</li>
+                        <li><strong>Entry by Landlord:</strong> Landlord may enter with 24 hours notice for repairs/inspections.</li>
+                        <li><strong>Subletting:</strong> Tenant shall not sublet without landlord's written consent.</li>
+                    </ol>
+                    
+                    <h3>Additional Terms</h3>
+                    <div class="form-group">
+                        <label for="additional-terms">Add any additional terms or special conditions</label>
+                        <textarea id="additional-terms" name="additional-terms"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Signatures -->
+            <div class="lease-section signature-section">
+                <h2>5. Signatures</h2>
+                <p>By signing below, both parties agree to the terms of this lease agreement.</p>
+                
+                <div class="signature-fields">
+                    <div class="form-group">
+                        <div class="signature-line">Landlord Signature</div>
+                        <input type="text" id="landlord-signature" name="landlord-signature" required>
+                        <label for="landlord-sign-date" class="required">Date</label>
+                        <input type="date" id="landlord-sign-date" name="landlord-sign-date" required>
+                    </div>
+                    <div class="form-group">
+                        <div class="signature-line">Tenant Signature</div>
+                        <input type="text" id="tenant-signature" name="tenant-signature" required>
+                        <label for="tenant-sign-date" class="required">Date</label>
+                        <input type="date" id="tenant-sign-date" name="tenant-sign-date" required>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-button">Submit Lease Agreement</button>
+        </form>
+    </div>
+
+    <script>
+        // Set current date in header
+        const today = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('current-date').textContent = today.toLocaleDateString('en-US', options);
+
+    </script>
+ </body>
+ <br>
+<br>
+<br>
+
+     <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Holding the title of the largest corporation in the Philippines, L&L also maintains a significant presence in the luxury market, offering a wide array of upscale products and services.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <div class="contact-info">
+                    <a href="mailto:L&L-Rental@Gmail.com"><i class="fas fa-envelope"></i> L&L-Rental@Gmail.com</a>
+                    <a href="tel:+63987654321"><i class="fas fa-phone"></i> +63 987 654 321</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/?lang=en-ca"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.tiktok.com/explore"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            © 2025 L&L RENTALS All rights reserved.
+        </div>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </footer>
+
+</html>
